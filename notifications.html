@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trafix - Notifications</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .notification {
+      background: white;
+      margin-bottom: 15px;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .unread {
+      border-left: 5px solid #2563eb;
+    }
+
+    .date {
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Notifications</h1>
+
+  <div class="container">
+    <div class="notification unread">
+      <h3>New Violation Issued</h3>
+      <p>A speeding violation has been added to your account.</p>
+      <p class="date">2026-05-10</p>
+    </div>
+
+    <div class="notification">
+      <h3>Payment Reminder</h3>
+      <p>You have an unpaid traffic fine.</p>
+      <p class="date">2026-05-09</p>
+    </div>
+
+    <div class="notification">
+      <h3>Objection Status Updated</h3>
+      <p>Your objection is currently under review.</p>
+      <p class="date">2026-05-08</p>
+    </div>
+  </div>
+
+</body>
+</html>
