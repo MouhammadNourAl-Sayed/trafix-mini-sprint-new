@@ -1,0 +1,21 @@
+name: Simple Check
+
+on: push
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        run: |
+          test -f README.md || { echo "README.md is missing"; exit 1; }
+          test -f index.html || { echo "index.html is missing"; exit 1; }
+          test -f login.html || { echo "login.html is missing"; exit 1; }
+          test -f categories.html || { echo "categories.html is missing"; exit 1; }
+          test -f violation-details.html || { echo "violation-details.html is missing"; exit 1; }
+          test -f notifications.html || { echo "notifications.html is missing"; exit 1; }
+          echo "All required files exist"
