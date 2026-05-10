@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trafix - Violation Categories</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #1f2937;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      display: grid;
+      gap: 15px;
+    }
+
+    .category {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .fine {
+      color: #dc2626;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Violation Categories</h1>
+
+  <div class="container" id="categories"></div>
+
+  <script>
+    const categories = [
+      {
+        name: "Speeding",
+        description: "Driving above the allowed speed limit.",
+        fine: "50 USD"
+      },
+      {
+        name: "Illegal Parking",
+        description: "Parking in a restricted or unauthorized area.",
+        fine: "25 USD"
+      },
+      {
+        name: "Running Red Light",
+        description: "Crossing an intersection after the traffic light turns red.",
+        fine: "75 USD"
+      }
+    ];
+
+    const container = document.getElementById("categories");
+
+    categories.forEach(category => {
+      const div = document.createElement("div");
+      div.className = "category";
+
+      div.innerHTML = `
+        <h2>${category.name}</h2>
+        <p>${category.description}</p>
+        <p class="fine">Fine: ${category.fine}</p>
+      `;
+
+      container.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
